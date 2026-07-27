@@ -1,0 +1,47 @@
+HeatPilot License Agreement
+
+Copyright (c) 2026 AgentC Consulting LLC. All rights reserved.
+
+HeatPilot is proprietary, closed-source software made available free of
+charge. This is not an open-source license — no source code is provided or
+licensed under these terms.
+
+1. GRANT OF USE
+   You may install and use HeatPilot, for personal or commercial purposes,
+   on any Mac you own or control, at no cost. This right does not expire
+   and is not tied to a subscription.
+
+2. WHAT YOU MAY NOT DO
+   You may not redistribute modified, patched, re-signed, or re-packaged
+   builds of HeatPilot. You may not reverse engineer, decompile, or
+   disassemble the app except to the extent applicable law expressly
+   permits despite this restriction. You may not remove or alter this
+   notice or HeatPilot's code signature.
+
+3. REDISTRIBUTING THE ORIGINAL APP
+   You may share the official, unmodified installer as published by
+   AgentC Consulting LLC. Always point people to the official releases
+   page so they get the current, signed, notarized build.
+
+4. HARDWARE CONTROL — ASSUMPTION OF RISK
+   HeatPilot adjusts fan behavior by writing Apple SMC fan-control keys.
+   It is designed so that Apple's automatic thermal management is restored
+   by System Auto, by quitting the app, and by the helper's own shutdown
+   handling — but you use hardware-control software at your own risk, and
+   you are responsible for monitoring your own machine.
+
+5. NO WARRANTY
+   HeatPilot is provided "as is," without warranty of any kind, express or
+   implied, including but not limited to warranties of merchantability,
+   fitness for a particular purpose, and non-infringement. AgentC
+   Consulting LLC is not liable for any damages arising from use of
+   HeatPilot, to the maximum extent permitted by law.
+
+6. HEATPILOT STAYS FREE
+   HeatPilot — this app, including its updates — is free for life. This
+   promise is not a trial. AgentC Consulting LLC may offer separate,
+   additional products in the future; that does not change this Agreement
+   or make this app any less free.
+
+7. CONTACT
+   Questions about this license: agent_c@agentc.consulting
