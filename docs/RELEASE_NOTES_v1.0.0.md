@@ -14,7 +14,7 @@ spctl -a -t open --context context:primary-signature -vv HeatPilot-Installer.dmg
 ```
 
 `HeatPilot-Installer.dmg` SHA-256:
-`11dc7b0ee1f9a3ca079753ab33ae8a07619d928bffb2ec66e45086aef058a343`
+`e1c93539463e4390a21bc0a2b39762f141e48c605d4f1ff6be580d67c3c23dab`
 
 `SHA256SUMS` is GPG-signed (`SHA256SUMS.asc`) with the AgentC Consulting release key.
 

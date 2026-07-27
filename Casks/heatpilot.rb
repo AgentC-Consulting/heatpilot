@@ -1,6 +1,6 @@
 cask "heatpilot" do
   version "1.0.0"
-  sha256 "11dc7b0ee1f9a3ca079753ab33ae8a07619d928bffb2ec66e45086aef058a343"
+  sha256 "e1c93539463e4390a21bc0a2b39762f141e48c605d4f1ff6be580d67c3c23dab"
 
   url "https://github.com/AgentC-Consulting/heatpilot/releases/download/v#{version}/HeatPilot-Installer.dmg"
   name "HeatPilot"
