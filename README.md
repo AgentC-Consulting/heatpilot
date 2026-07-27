@@ -2,13 +2,21 @@
 
 <img src="docs/img/about-logo.png" width="64" alt="The HeatPilot app icon">
 
+![Apple Silicon](https://img.shields.io/badge/Apple_Silicon-M--series_only-1c212e)
+![macOS 14+](https://img.shields.io/badge/macOS-14%2B-1c212e)
+![Free for life](https://img.shields.io/badge/free-for_life-dab56e)
+![Signed & notarized](https://img.shields.io/badge/signed-Developer_ID_%C2%B7_notarized-1c212e)
+
 **HeatPilot is a free, native macOS menu-bar fan controller** — built for
 Apple Silicon, macOS 14 and later. Your Mac runs hot; Apple's fan curve
 waits. HeatPilot gives you a cooler curve and a Full Blast button, with one
 click back to Apple's defaults, always.
 
-**[Download the latest release](../../releases/latest)** — free, and free for
-life.
+Made by **[AgentC Consulting](https://agentc.consulting)** — we build native
+apps like this for clients, and this one is a free giveaway. No sign-up, no
+account, no telemetry, free for life.
+
+**[Download the latest release](../../releases/latest)** — just download and go.
 
 ## What it does
 
@@ -102,6 +110,13 @@ brew install --cask heatpilot
 3. Delete `~/Library/Application Support/HeatPilot/`.
 
 (Homebrew: `brew uninstall --zap heatpilot` does all of it.)
+
+## Bugs, ideas, weird fan behavior?
+
+**[Open an issue](../../issues)** — we read everything, and hardware quirks
+are exactly the reports we want. Include your Mac model and what mode you
+were in; the daemon log at `~/Library/Application Support/HeatPilot/daemon.log`
+helps too.
 
 ## Who made this
 
