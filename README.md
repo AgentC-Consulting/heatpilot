@@ -123,3 +123,10 @@ helps too.
 HeatPilot is made by [AgentC Consulting](https://agentc.consulting) — we
 build native apps like this for clients, and we give this one away because
 showing beats telling. Questions: agent_c@agentc.consulting
+
+---
+
+<p align="center"><a href="https://agentc.consulting"><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AgentC-Consulting/.github/main/brand/wordmark-dark.png">
+  <img src="https://raw.githubusercontent.com/AgentC-Consulting/.github/main/brand/wordmark-light.png" alt="AgentC Consulting" width="220">
+</picture></a></p>
