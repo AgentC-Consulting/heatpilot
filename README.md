@@ -4,97 +4,21 @@
 
 ![Apple Silicon](https://img.shields.io/badge/Apple_Silicon-M--series_only-1c212e)
 ![macOS 14+](https://img.shields.io/badge/macOS-14%2B-1c212e)
-![Free for life](https://img.shields.io/badge/free-for_life-dab56e)
+![Free](https://img.shields.io/badge/free-for_life-dab56e)
 ![Signed & notarized](https://img.shields.io/badge/signed-Developer_ID_%C2%B7_notarized-1c212e)
 
-**HeatPilot is a free, native macOS menu-bar fan controller** — built for
-Apple Silicon, macOS 14 and later. Your Mac runs hot; Apple's fan curve
-waits. HeatPilot gives you a cooler curve and a Full Blast button, with one
-click back to Apple's defaults, always.
+**Your Mac runs hot. Apple waits. HeatPilot doesn't.**
 
-Made by **[AgentC Consulting](https://agentc.consulting)** — we build native
-apps like this for clients, and this one is a free giveaway. No sign-up, no
-account, no telemetry, free for life.
+HeatPilot is a free menu bar app that turns your Mac's fans up before it gets hot.
+One slider, right in your menu bar.
 
-**[Download the latest release](../../releases/latest)** — just download and go.
+**[Download HeatPilot](https://github.com/AgentC-Consulting/heatpilot/releases/latest/download/HeatPilot-Installer.dmg)** · [agentc.consulting/heatpilot](https://agentc.consulting/heatpilot)
 
-## What it does
+## Up and running in a minute
 
-- **Three modes, zero drama:**
-  - **System Auto** — Apple's built-in thermal management, untouched. This is
-    always one click away, and it's what quitting the app restores.
-  - **Cooler Auto** — a conservative custom curve that starts nudging fan
-    speed around 45 °C and gets meaningfully more aggressive around 65 °C
-    (150 °F). It only ever raises fan speed above Apple's curve — it never
-    lets your Mac run hotter than Apple would.
-  - **Full Blast** — every fan at maximum RPM until you switch modes.
-- **Live temperatures in your menu bar** — °F or °C following your system
-  locale, with per-fan RPM detail in the dropdown.
-- **No cloud, no account, no telemetry** — HeatPilot makes zero network
-  calls. Cut your network; everything still works. All state is a few JSON
-  files in `~/Library/Application Support/HeatPilot/`.
-- **Free for life** — no trial, no subscription, no paywall.
-
-## About the administrator password
-
-The first time you pick **Cooler Auto** or **Full Blast**, macOS asks for
-your administrator password — the prompt says exactly why: *"HeatPilot needs
-administrator access to start its fan-control helper."*
-
-That password starts a small bundled helper (`HeatPilotDaemon`) as root,
-because writing fan speeds to Apple's SMC requires elevated privileges. The
-menu-bar app itself never runs privileged, **System Auto never needs a
-password**, and no unsupported Mac is ever shown the prompt at all.
-
-## Safety
-
-HeatPilot writes Apple SMC fan-control keys. It is built so the failure mode
-is always "Apple takes back over":
-
-- **System Auto** and **quitting the app** both restore Apple's automatic
-  thermal management.
-- The helper traps termination signals (kill, logout, shutdown) and restores
-  Apple's control before exiting — fans are never left pinned at a manual
-  RPM. (A force-kill with `kill -9` can't be trapped; reselect System Auto
-  or reboot — manual fan targets do not survive a reboot.)
-- After a minute of continuous System Auto the helper exits on its own, so
-  no root process lingers.
-- On Macs without controllable fans (MacBook Air) the control modes are
-  disabled with a plain explanation — no password prompt, no helper.
-
-As with any hardware-control tool: watch temperatures after first use, and
-don't leave Full Blast running unattended until you trust it on your machine.
-
-## Verify your download
-
-Every release is signed with Apple Developer ID
-(`AgentC Consulting LLC (PXDF92M2T4)`), notarized by Apple, and stapled —
-Gatekeeper verifies it before first launch. Check for yourself:
-
-```bash
-spctl -a -t open --context context:primary-signature -vv HeatPilot-Installer.dmg
-codesign -dv --verify /Applications/HeatPilot.app
-shasum -a 256 -c SHA256SUMS   # SHA256SUMS ships with every release
-```
-
-`SHA256SUMS` is GPG-signed (`SHA256SUMS.asc`) with the AgentC Consulting
-release key.
-
-## Requirements
-
-- An Apple Silicon Mac **with fans** (MacBook Pro, Mac mini, Mac Studio,
-  iMac, Mac Pro). On fanless Macs, HeatPilot shows temperatures but disables
-  fan control.
-- macOS 14 Sonoma or later.
-- Intel Macs are not supported.
-
-## Install
-
-1. Download `HeatPilot-Installer.dmg` from the
-   [latest release](../../releases/latest), open it, and drag HeatPilot to
-   Applications.
-2. Launch HeatPilot — it lives in the menu bar (no Dock icon).
-3. Pick a mode.
+1. Drag HeatPilot to Applications and open it.
+2. Click **Allow** once in System Settings. That's the only time it asks.
+3. Pick a level from the menu bar. 0 is Apple's normal. 10 is full blast.
 
 Or with Homebrew:
 
@@ -103,26 +27,42 @@ brew tap agentc-consulting/heatpilot https://github.com/AgentC-Consulting/heatpi
 brew install --cask heatpilot
 ```
 
-## Uninstall
+## Nothing to worry about
 
-1. Pick **System Auto**, then **Quit HeatPilot** from the menu.
-2. Delete `/Applications/HeatPilot.app`.
-3. Delete `~/Library/Application Support/HeatPilot/`.
+- It never runs your fans slower than Apple would.
+- Quit it, and your Mac goes right back to normal.
+- No account, no tracking, no ads. It updates itself.
 
-(Homebrew: `brew uninstall --zap heatpilot` does all of it.)
+## Questions
 
-## Bugs, ideas, weird fan behavior?
+**Will it work on my Mac?** Any Apple Silicon Mac with fans, on macOS 14 or newer.
+A MacBook Air has no fans, so there's nothing to turn up. Intel Macs aren't supported.
 
-**[Open an issue](../../issues)** — we read everything, and hardware quirks
-are exactly the reports we want. Include your Mac model and what mode you
-were in; the daemon log at `~/Library/Application Support/HeatPilot/daemon.log`
-helps too.
+**Is it really free?** Yes. [AgentC Consulting](https://agentc.consulting) builds Mac
+apps for businesses. This one's on us.
 
-## Who made this
+**How do I remove it?** Quit it and drag it to the Trash.
+(Homebrew: `brew uninstall --zap heatpilot`.)
 
-HeatPilot is made by [AgentC Consulting](https://agentc.consulting) — we
-build native apps like this for clients, and we give this one away because
-showing beats telling. Questions: agent_c@agentc.consulting
+**Does it go online?** Once a day, to check this page for an update. Updates install
+only if they carry our signature.
+
+**Something off?** [Open an issue](../../issues), or tell us without a GitHub account
+at [agentc.consulting/heatpilot](https://agentc.consulting/heatpilot). Your Mac model
+and macOS version help.
+
+## Verify a download
+
+Every release is signed with Apple Developer ID (`AgentC Consulting LLC (PXDF92M2T4)`),
+notarized by Apple, and ships a GPG-signed checksum file.
+
+```bash
+shasum -a 256 -c SHA256SUMS
+gpg --verify SHA256SUMS.asc SHA256SUMS
+spctl -a -t open --context context:primary-signature -vv HeatPilot-Installer.dmg
+```
+
+Release notes: [1.1.0](docs/RELEASE_NOTES_v1.1.0.md) · [1.0.0](docs/RELEASE_NOTES_v1.0.0.md)
 
 ---
 
