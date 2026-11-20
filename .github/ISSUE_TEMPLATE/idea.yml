@@ -1,0 +1,17 @@
+name: An idea
+description: Something HeatPilot could do for you.
+title: "[Idea] "
+labels: ["idea"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like HeatPilot to do?
+      description: The moment you wanted it, and what would have helped.
+    validations:
+      required: true
+  - type: dropdown
+    id: mac
+    attributes:
+      label: Your Mac
+      options: [MacBook Pro, Mac mini, Mac Studio, iMac, Mac Pro, MacBook Air, Another Mac]

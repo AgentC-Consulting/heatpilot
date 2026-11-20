@@ -1,0 +1,65 @@
+name: Fan behavior or a bug
+description: Fans doing something odd, a temperature that looks wrong, or anything that broke.
+title: "[Fans] "
+labels: ["fan behavior"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for flying HeatPilot. Hardware quirks are exactly the reports we want, and your Mac model and level help most.
+  - type: dropdown
+    id: mac
+    attributes:
+      label: Your Mac
+      options:
+        - MacBook Pro 14-inch
+        - MacBook Pro 16-inch
+        - Mac mini
+        - Mac Studio
+        - iMac
+        - Mac Pro
+        - MacBook Air
+        - Another Mac
+    validations:
+      required: true
+  - type: input
+    id: chip
+    attributes:
+      label: Chip
+      description: Apple menu → About This Mac.
+      placeholder: M4 Pro
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version
+      placeholder: macOS 26.1
+    validations:
+      required: true
+  - type: dropdown
+    id: level
+    attributes:
+      label: Cooling level at the time
+      options: ["0 · Apple default", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10 · Full Blast", "Not sure"]
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: HeatPilot version
+      description: Shown in About HeatPilot.
+      placeholder: "1.1.3"
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you expected, and what the fans or temperatures did instead.
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Helper log (optional)
+      description: The last 50 lines of /Library/Logs/HeatPilot.log. Run `tail -50 /Library/Logs/HeatPilot.log` in Terminal and paste the result.
+      render: shell
