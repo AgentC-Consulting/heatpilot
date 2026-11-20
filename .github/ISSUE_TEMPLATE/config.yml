@@ -1,5 +1,8 @@
-blank_issues_enabled: true
+blank_issues_enabled: false
 contact_links:
-  - name: Email AgentC Consulting
+  - name: Tell us without a GitHub account
+    url: https://agentc.consulting/heatpilot
+    about: Same team, same inbox. Use this if you'd rather not sign in.
+  - name: Want an app like this for your business?
     url: https://agentc.consulting
-    about: Prefer email or want to talk about custom app work? agent_c@agentc.consulting
+    about: AgentC Consulting builds native Mac apps. Email agent_c@agentc.consulting.
