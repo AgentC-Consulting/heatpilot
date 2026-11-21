@@ -128,8 +128,7 @@ Open the menu, hold <kbd>Option</kbd>, and choose **Remove Background Helper**. 
 <br>
 
 ```bash
-brew tap agentc-consulting/heatpilot https://github.com/AgentC-Consulting/heatpilot
-brew install --cask heatpilot
+brew install --cask agentc-consulting/tap/heatpilot
 ```
 
 </details>
