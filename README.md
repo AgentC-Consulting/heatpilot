@@ -40,6 +40,20 @@
 
 0 is Apple's normal. 10 is every fan flat out. HeatPilot remembers your pick, even after a restart.
 
+## Autopilot: your coding assistant flies the fans
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/img/screens/autopilot-dark.png">
+    <img src="docs/img/screens/autopilot-light.png" width="400" alt="HeatPilot 1.2 Autopilot step: Autopilot switched on, installed for Claude Code, Codex, and Claude Desktop.">
+  </picture>
+</p>
+
+Turn on Autopilot and Claude Code, Claude Desktop, Codex, or Gemini CLI can read your temperatures and turn the fans up for a big build, then hand them back.
+
+- It only ever adds cooling on top of your level, and every boost ends on its own within 30 minutes.
+- **Remove** puts each assistant's settings back as they were.
+
 ## The propeller tells you how hard your fans are working
 
 <picture>
@@ -89,6 +103,12 @@ flowchart LR
 
 > [!TIP]
 > Trying Full Blast for the first time? Watch your temperatures for a few minutes before leaving it on.
+
+## What's new
+
+- **1.2.1** · A managed Mac's administrator can start the fan helper at install, so cooling works from the first boot. [Notes](docs/RELEASE_NOTES_v1.2.1.md)
+- **1.2.0** · Autopilot, and cooling at the login window on managed Macs. [Notes](docs/RELEASE_NOTES_v1.2.0.md)
+- **1.1.3** · Faster spin-up, Preferences after setup, and a drag-to-land installer. [Notes](docs/RELEASE_NOTES_v1.1.3.md)
 
 ## Questions
 
@@ -146,7 +166,7 @@ spctl -a -t open --context context:primary-signature -vv HeatPilot-Installer.dmg
 ```
 
 HeatPilot checks for updates once a day and installs only updates that carry our signature.
-Release notes: [1.1.3](docs/RELEASE_NOTES_v1.1.3.md) · [1.1.2](docs/RELEASE_NOTES_v1.1.2.md) · [1.1.1](docs/RELEASE_NOTES_v1.1.1.md) · [1.1.0](docs/RELEASE_NOTES_v1.1.0.md) · [1.0.0](docs/RELEASE_NOTES_v1.0.0.md)
+Release notes: [1.2.1](docs/RELEASE_NOTES_v1.2.1.md) · [1.2.0](docs/RELEASE_NOTES_v1.2.0.md) · [1.1.3](docs/RELEASE_NOTES_v1.1.3.md) · [1.1.2](docs/RELEASE_NOTES_v1.1.2.md) · [1.1.1](docs/RELEASE_NOTES_v1.1.1.md) · [1.1.0](docs/RELEASE_NOTES_v1.1.0.md) · [1.0.0](docs/RELEASE_NOTES_v1.0.0.md)
 
 </details>
 
