@@ -52,7 +52,7 @@
 Turn on Autopilot and Claude Code, Claude Desktop, Codex, or Gemini CLI can read your temperatures and turn the fans up for a big build, then hand them back.
 
 - It only ever adds cooling on top of your level, and every boost ends on its own within 30 minutes.
-- **Remove** puts each assistant back exactly as it was.
+- **Remove** puts each assistant's settings back as they were.
 
 ## The propeller tells you how hard your fans are working
 
